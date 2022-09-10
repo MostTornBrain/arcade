@@ -623,10 +623,10 @@ class TextureAtlas:
         region = self._atlas_regions[texture.name]
         proj_prev = self._ctx.projection_2d
         # Use provided projection or default
-        projection = projection or (0, region.width, 0, region.height)
+        # projection = projection or (0, region.width, 0, region.height)
         # Flip the top and bottom because we need to render things upside down
-        projection = projection[0], projection[1], projection[3], projection[2]
-        self._ctx.projection_2d = projection
+        # projection = projection[0], projection[1], projection[3], projection[2]
+        # self._ctx.projection_2d = projection
 
         with self._fbo.activate() as fbo:
             fbo.viewport = region.x, region.y, region.width, region.height

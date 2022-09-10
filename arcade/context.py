@@ -280,9 +280,9 @@ class ArcadeContext(Context):
         if width == 0 or height == 0:
             return
 
-        self.window.projection = Mat4.orthogonal_projection(
-            value[0], value[1], value[2], value[3], -100, 100,
-        )
+        # self.window.projection = Mat4.orthogonal_projection(
+        #     value[0], value[1], value[2], value[3], -100, 100,
+        # )
 
     @property
     def projection_2d_matrix(self) -> Mat4:
@@ -301,7 +301,7 @@ class ArcadeContext(Context):
         if not isinstance(value, Mat4):
             raise ValueError("projection_matrix must be a Mat4 object")
 
-        self.window.projection = value
+        # self.window.projection = value
 
     @property
     def view_matrix_2d(self) -> Mat4:
@@ -321,7 +321,7 @@ class ArcadeContext(Context):
             raise ValueError("view_matrix must be a Mat4 object")
 
         self._view_matrix_2d = value
-        self.window.view = self._view_matrix_2d
+        # self.window.view = self._view_matrix_2d
 
     @contextmanager
     def pyglet_rendering(self):

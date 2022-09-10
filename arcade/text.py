@@ -105,7 +105,7 @@ def _draw_label_with_rotation(label: pyglet.text.Label, rotation: float) -> None
         t1_view = Mat4.from_translation((-x, -y, 0))
         t2_view = Mat4.from_translation((x, y, 0))
         final_view = t1_view @ r_view @ t2_view
-        window.view = final_view
+        # window.view = final_view
 
     with window.ctx.pyglet_rendering():
         label.draw()
