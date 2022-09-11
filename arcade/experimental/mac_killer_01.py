@@ -1,4 +1,11 @@
+import logging
+import pyglet
+pyglet.options['debug_gl'] = True
+pyglet.options['debug_gl_trace'] = True
+pyglet.options['debug_gl_trace_args'] = True
+
 import arcade
+arcade.configure_logging(logging.DEBUG)
 
 SPRITE_SCALING = 0.5
 SPRITE_SCALING_COIN = 0.2
